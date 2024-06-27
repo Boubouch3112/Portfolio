@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghislain's Portfolio</title>
+    <title>Ghislaine's Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/normalize.css">
     <style>
         body {
@@ -12,6 +12,41 @@
             color: #333;
             margin: 0;
             padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            background-color: #2d6a4f;
+            color: white;
+            width: 250px;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar h2 {
+            margin: 0;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #4caf50;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
         }
         .header {
             background-color: #2d6a4f;
@@ -19,23 +54,29 @@
             padding: 20px;
             text-align: center;
         }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         .project {
             background-color: white;
-            margin: 20px 0;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+        .project img {
+            max-width: 100%;
+            border-radius: 8px;
         }
         .contact {
             background-color: #1b4332;
             color: white;
             padding: 20px;
             text-align: center;
+            margin-top: 20px;
         }
         .contact p {
             margin: 5px 0;
@@ -47,30 +88,53 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Ghislain's Portfolio</h1>
+    <div class="sidebar">
+        <h2>Ghislaine Dmstr</h2>
+        <p>Full Stack Developer</p>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
     </div>
-    <div class="container">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project Title 1</h3>
-            <p>Description of project 1.</p>
+    <div class="content">
+        <div class="header">
+            <h1>Projects</h1>
         </div>
-        <div class="project">
-            <h3>Project Title 2</h3>
-            <p>Description of project 2.</p>
+        <div class="projects">
+            <div class="project">
+                <img src="project1.png" alt="Project 1">
+                <h3>Interpol8r</h3>
+                <p>Experimental web app with homemade recursive string interpolation.</p>
+            </div>
+            <div class="project">
+                <img src="project2.png" alt="Project 2">
+                <h3>BlogSpire</h3>
+                <p>Blogging web app created for the Engineering team at WeSpire.</p>
+            </div>
+            <div class="project">
+                <img src="project3.png" alt="Project 3">
+                <h3>Code Island</h3>
+                <p>Online headquarters for the local Code for America brigade in Rhode Island.</p>
+            </div>
+            <!-- Add more projects as needed -->
         </div>
-        <div class="project">
-            <h3>Project Title 3</h3>
-            <p>Description of project 3.</p>
+        <div class="contact" id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:ghislaindmstr@gmail.com">ghislaindmstr@gmail.com</a></p>
+            <p>French Phone: +33 6 18 56 23 53</p>
+            <p>US Phone: +1 619 389 5886</p>
+            <p>GitHub: <a href="https://github.com/Boubouch3112/Projects.git" target="_blank">github.com/Boubouch3112/Projects.git</a></p>
         </div>
-        <!-- Add more projects as needed -->
     </div>
-    <div class="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:ghislaindmstr@gmail.com">ghislaindmstr@gmail.com</a></p>
-        <p>FR: +33 6 18 56 23 53</p>
-        <p>US: +1 619 389 5886</p>
+</body>
+</html>
+
         <p>GitHub: <a href="https://github.com/Boubouch3112/Projects.git" target="_blank">github.com/Boubouch3112/Projects.git</a></p>
     </div>
 </body>
